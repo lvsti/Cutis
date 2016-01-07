@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E87699701C3F14DB00FAD8E3"
                BuildableName = "Cutis.framework"
-               BlueprintName = "Cutis"
+               BlueprintName = "Cutis (OSX)"
                ReferencedContainer = "container:Cutis.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E87699701C3F14DB00FAD8E3"
             BuildableName = "Cutis.framework"
-            BlueprintName = "Cutis"
+            BlueprintName = "Cutis (OSX)"
             ReferencedContainer = "container:Cutis.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E87699701C3F14DB00FAD8E3"
             BuildableName = "Cutis.framework"
-            BlueprintName = "Cutis"
+            BlueprintName = "Cutis (OSX)"
             ReferencedContainer = "container:Cutis.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

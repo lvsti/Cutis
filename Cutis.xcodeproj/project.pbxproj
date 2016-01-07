@@ -8,16 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E87699751C3F14DB00FAD8E3 /* Cutis.h in Headers */ = {isa = PBXBuildFile; fileRef = E87699741C3F14DB00FAD8E3 /* Cutis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E876997D1C3F153800FAD8E3 /* UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997C1C3F153800FAD8E3 /* UTType.swift */; };
+		E876997F1C3F157E00FAD8E3 /* UTTypeDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */; };
+		E87699811C3F159E00FAD8E3 /* OSType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87699801C3F159E00FAD8E3 /* OSType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E87699711C3F14DB00FAD8E3 /* Cutis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cutis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87699741C3F14DB00FAD8E3 /* Cutis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cutis.h; sourceTree = "<group>"; };
 		E87699761C3F14DB00FAD8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E876997C1C3F153800FAD8E3 /* UTType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTType.swift; sourceTree = "<group>"; };
+		E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTypeDeclaration.swift; sourceTree = "<group>"; };
+		E87699801C3F159E00FAD8E3 /* OSType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSType.swift; sourceTree = "<group>"; };
+		E87699871C3F179C00FAD8E3 /* Cutis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cutis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E876996D1C3F14DB00FAD8E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87699831C3F179C00FAD8E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				E87699711C3F14DB00FAD8E3 /* Cutis.framework */,
+				E87699871C3F179C00FAD8E3 /* Cutis.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +63,9 @@
 			children = (
 				E87699741C3F14DB00FAD8E3 /* Cutis.h */,
 				E87699761C3F14DB00FAD8E3 /* Info.plist */,
+				E87699801C3F159E00FAD8E3 /* OSType.swift */,
+				E876997C1C3F153800FAD8E3 /* UTType.swift */,
+				E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */,
 			);
 			path = Cutis;
 			sourceTree = "<group>";
@@ -63,12 +81,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E87699841C3F179C00FAD8E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E87699701C3F14DB00FAD8E3 /* Cutis */ = {
+		E87699701C3F14DB00FAD8E3 /* Cutis (OSX) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E87699791C3F14DB00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis" */;
+			buildConfigurationList = E87699791C3F14DB00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis (OSX)" */;
 			buildPhases = (
 				E876996C1C3F14DB00FAD8E3 /* Sources */,
 				E876996D1C3F14DB00FAD8E3 /* Frameworks */,
@@ -79,9 +104,27 @@
 			);
 			dependencies = (
 			);
-			name = Cutis;
+			name = "Cutis (OSX)";
 			productName = Cutis;
 			productReference = E87699711C3F14DB00FAD8E3 /* Cutis.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E87699861C3F179C00FAD8E3 /* Cutis (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E876998C1C3F179C00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis (iOS)" */;
+			buildPhases = (
+				E87699821C3F179C00FAD8E3 /* Sources */,
+				E87699831C3F179C00FAD8E3 /* Frameworks */,
+				E87699841C3F179C00FAD8E3 /* Headers */,
+				E87699851C3F179C00FAD8E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cutis (iOS)";
+			productName = Cutis;
+			productReference = E87699871C3F179C00FAD8E3 /* Cutis.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -94,6 +137,9 @@
 				ORGANIZATIONNAME = "Tamas Lustyik";
 				TargetAttributes = {
 					E87699701C3F14DB00FAD8E3 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					E87699861C3F179C00FAD8E3 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -110,7 +156,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E87699701C3F14DB00FAD8E3 /* Cutis */,
+				E87699701C3F14DB00FAD8E3 /* Cutis (OSX) */,
+				E87699861C3F179C00FAD8E3 /* Cutis (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -123,10 +170,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E87699851C3F179C00FAD8E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E876996C1C3F14DB00FAD8E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87699811C3F159E00FAD8E3 /* OSType.swift in Sources */,
+				E876997D1C3F153800FAD8E3 /* UTType.swift in Sources */,
+				E876997F1C3F157E00FAD8E3 /* UTTypeDeclaration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87699821C3F179C00FAD8E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,7 +237,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -214,7 +279,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -225,6 +291,7 @@
 		E876997A1C3F14DB00FAD8E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -235,14 +302,16 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.Cutis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cutis;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E876997B1C3F14DB00FAD8E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -253,8 +322,47 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.Cutis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cutis;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E876998D1C3F179C00FAD8E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Cutis/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.Cutis;
+				PRODUCT_NAME = Cutis;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E876998E1C3F179C00FAD8E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Cutis/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.Cutis;
+				PRODUCT_NAME = Cutis;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -270,11 +378,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E87699791C3F14DB00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis" */ = {
+		E87699791C3F14DB00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis (OSX)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E876997A1C3F14DB00FAD8E3 /* Debug */,
 				E876997B1C3F14DB00FAD8E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E876998C1C3F179C00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E876998D1C3F179C00FAD8E3 /* Debug */,
+				E876998E1C3F179C00FAD8E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

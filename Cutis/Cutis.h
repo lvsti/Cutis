@@ -6,7 +6,7 @@
 //  Copyright © 2016. Tamas Lustyik. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Cutis.
 FOUNDATION_EXPORT double CutisVersionNumber;
