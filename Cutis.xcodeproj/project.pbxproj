@@ -11,6 +11,8 @@
 		E876997D1C3F153800FAD8E3 /* UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997C1C3F153800FAD8E3 /* UTType.swift */; };
 		E876997F1C3F157E00FAD8E3 /* UTTypeDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */; };
 		E87699811C3F159E00FAD8E3 /* OSType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87699801C3F159E00FAD8E3 /* OSType.swift */; };
+		E8CCF4AC1C41A91700AFDF91 /* UTCoreTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4AB1C41A91700AFDF91 /* UTCoreTypes.swift */; };
+		E8CCF4AD1C41A91700AFDF91 /* UTCoreTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCF4AB1C41A91700AFDF91 /* UTCoreTypes.swift */; };
 		E8CCF4AE1C41AC5A00AFDF91 /* UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997C1C3F153800FAD8E3 /* UTType.swift */; };
 		E8CCF4AF1C41AC5E00AFDF91 /* UTTypeDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +25,7 @@
 		E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTTypeDeclaration.swift; sourceTree = "<group>"; };
 		E87699801C3F159E00FAD8E3 /* OSType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSType.swift; sourceTree = "<group>"; };
 		E87699871C3F179C00FAD8E3 /* Cutis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cutis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CCF4AB1C41A91700AFDF91 /* UTCoreTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCoreTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				E87699741C3F14DB00FAD8E3 /* Cutis.h */,
 				E87699761C3F14DB00FAD8E3 /* Info.plist */,
 				E87699801C3F159E00FAD8E3 /* OSType.swift */,
+				E8CCF4AB1C41A91700AFDF91 /* UTCoreTypes.swift */,
 				E876997C1C3F153800FAD8E3 /* UTType.swift */,
 				E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */,
 			);
@@ -188,6 +192,7 @@
 			files = (
 				E87699811C3F159E00FAD8E3 /* OSType.swift in Sources */,
 				E876997D1C3F153800FAD8E3 /* UTType.swift in Sources */,
+				E8CCF4AC1C41A91700AFDF91 /* UTCoreTypes.swift in Sources */,
 				E876997F1C3F157E00FAD8E3 /* UTTypeDeclaration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8CCF4AE1C41AC5A00AFDF91 /* UTType.swift in Sources */,
+				E8CCF4AD1C41A91700AFDF91 /* UTCoreTypes.swift in Sources */,
 				E8CCF4AF1C41AC5E00AFDF91 /* UTTypeDeclaration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
