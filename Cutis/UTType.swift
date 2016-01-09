@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if os(iOS)
+import MobileCoreServices
+#endif
 
 public struct UTType {
     public let stringValue: String

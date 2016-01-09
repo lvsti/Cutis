@@ -11,6 +11,8 @@
 		E876997D1C3F153800FAD8E3 /* UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997C1C3F153800FAD8E3 /* UTType.swift */; };
 		E876997F1C3F157E00FAD8E3 /* UTTypeDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */; };
 		E87699811C3F159E00FAD8E3 /* OSType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87699801C3F159E00FAD8E3 /* OSType.swift */; };
+		E8CCF4AE1C41AC5A00AFDF91 /* UTType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997C1C3F153800FAD8E3 /* UTType.swift */; };
+		E8CCF4AF1C41AC5E00AFDF91 /* UTTypeDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876997E1C3F157E00FAD8E3 /* UTTypeDeclaration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CCF4AE1C41AC5A00AFDF91 /* UTType.swift in Sources */,
+				E8CCF4AF1C41AC5E00AFDF91 /* UTTypeDeclaration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 		E876998D1C3F179C00FAD8E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -342,6 +347,7 @@
 				PRODUCT_NAME = Cutis;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -349,6 +355,7 @@
 		E876998E1C3F179C00FAD8E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -385,6 +392,7 @@
 				E876997B1C3F14DB00FAD8E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E876998C1C3F179C00FAD8E3 /* Build configuration list for PBXNativeTarget "Cutis (iOS)" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +401,7 @@
 				E876998E1C3F179C00FAD8E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

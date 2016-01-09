@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if os(iOS)
+import MobileCoreServices
+#endif
 
 public struct UTTypeDeclaration {
     public private(set) var dictionaryValue: [String: AnyObject]
@@ -62,7 +65,10 @@ public struct UTTypeDeclaration {
 public struct UTTypeTagClass {
     public static let FileExtension = UTType(kUTTagClassFilenameExtension as String)
     public static let MIMEType = UTType(kUTTagClassMIMEType as String)
+    
+    #if os(OSX)
     public static let AppleOSType = UTType(kUTTagClassOSType as String)
     public static let ApplePasteboardType = UTType(kUTTagClassNSPboardType as String)
+    #endif
 }
 
