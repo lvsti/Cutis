@@ -59,34 +59,33 @@ public struct UTType {
         return UTTypeConformsTo(stringValue, type.stringValue)
     }
     
-    public func preferredTagWithClass(tagClass: UTType) -> UTType? {
-        guard let unmanaged = UTTypeCopyPreferredTagWithClass(stringValue, tagClass.stringValue) else {
+    public func preferredTagWithClass(tagClass: UTTypeTagClass) -> String? {
+        guard let unmanaged = UTTypeCopyPreferredTagWithClass(stringValue, tagClass.name) else {
             return nil
         }
         
-        return UTType(unmanaged.takeRetainedValue() as String)
+        return unmanaged.takeRetainedValue() as String
     }
     
     @available(OSX 10.10, iOS 8.0, *)
-    public func allTagsWithClass(tagClass: UTType) -> [UTType]? {
-        guard let unmanaged = UTTypeCopyAllTagsWithClass(stringValue, tagClass.stringValue) else {
+    public func allTagsWithClass(tagClass: UTTypeTagClass) -> [String]? {
+        guard let unmanaged = UTTypeCopyAllTagsWithClass(stringValue, tagClass.name) else {
             return nil
         }
         
-        let tags = unmanaged.takeRetainedValue() as NSArray as? [String]
-        return tags?.map(UTType.init)
+        return unmanaged.takeRetainedValue() as NSArray as? [String]
     }
     
-    static func preferredIdentifierForTagClass(tagClass: UTType, value: String, conformingToType type: UTType? = nil) -> UTType? {
-        guard let unmanaged = UTTypeCreatePreferredIdentifierForTag(tagClass.stringValue, value, type?.stringValue) else {
+    static func preferredIdentifierForTagClass(tagClass: UTTypeTagClass, tag: String, conformingToType type: UTType? = nil) -> UTType? {
+        guard let unmanaged = UTTypeCreatePreferredIdentifierForTag(tagClass.name, tag, type?.stringValue) else {
             return nil
         }
         
         return UTType(unmanaged.takeRetainedValue() as String)
     }
     
-    static func allIdentifiersForTagClass(tagClass: UTType, value: String, conformingToType type: UTType? = nil) -> [UTType]? {
-        guard let unmanaged = UTTypeCreateAllIdentifiersForTag(tagClass.stringValue, value, type?.stringValue) else {
+    static func allIdentifiersForTagClass(tagClass: UTTypeTagClass, tag: String, conformingToType type: UTType? = nil) -> [UTType]? {
+        guard let unmanaged = UTTypeCreateAllIdentifiersForTag(tagClass.name, tag, type?.stringValue) else {
             return nil
         }
         
