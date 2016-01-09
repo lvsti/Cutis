@@ -12,6 +12,7 @@ import MobileCoreServices
 #endif
 
 public struct UTTypeTagClass {
+    /// The name of this tag class
     public let name: String
     
     public static let FileExtension = UTTypeTagClass(name: kUTTagClassFilenameExtension as String)
