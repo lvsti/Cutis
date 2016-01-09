@@ -23,7 +23,7 @@ public struct UTTypeDeclaration {
         return types.map(UTType.init)
     }
 
-    public typealias TagSpecification = [UTType: [String]]
+    public typealias TagSpecification = [UTTypeTagClass: [String]]
     public var tagSpecification: TagSpecification? {
         guard let tagSpec = dictionaryValue[kUTTypeTagSpecificationKey as String] as? [String: AnyObject] else {
             return nil
@@ -31,7 +31,7 @@ public struct UTTypeDeclaration {
         
         return tagSpec
             .map({ (entry: (String, AnyObject)) -> TagSpecification.Element in
-                let tagClass = UTType(entry.0)
+                let tagClass = UTTypeTagClass(name: entry.0)
                 let tagValues = entry.1 as? [String] ?? [entry.1 as! String]
                 return (tagClass, tagValues)
             })
@@ -60,15 +60,5 @@ public struct UTTypeDeclaration {
     init(dictionaryValue: [String: AnyObject]) {
         self.dictionaryValue = dictionaryValue
     }
-}
-
-public struct UTTypeTagClass {
-    public static let FileExtension = UTType(kUTTagClassFilenameExtension as String)
-    public static let MIMEType = UTType(kUTTagClassMIMEType as String)
-    
-    #if os(OSX)
-    public static let AppleOSType = UTType(kUTTagClassOSType as String)
-    public static let ApplePasteboardType = UTType(kUTTagClassNSPboardType as String)
-    #endif
 }
 
