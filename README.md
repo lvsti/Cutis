@@ -1,5 +1,8 @@
 # Cutis
 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Cutis.svg?style=flat)]() 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Cutis ("Comfortable UTIs") is a thin Swift wrapper on top of the UTI (Universal Type Identifier) C API.
 
 Apart from providing a typesafe and object-oriented wrapper around type identifiers, Cutis does the heavy lifting for you by taking care of the casting and memory management required when interacting with CoreFoundation-style APIs.
@@ -30,4 +33,4 @@ func hasImageRep(item: NSPasteboardItem) -> Bool {
 
 ### Requirements
 
-Xcode 7, Swift 2.1, OSX 10.9, iOS 7
+Xcode 7, Swift 2.1, OSX 10.9, iOS 8.0
