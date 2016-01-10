@@ -8,6 +8,7 @@
 
 import Foundation
 
+#if os(OSX)
 
 extension String {
     /// A helper function to canonically encode an OSType as a CFString
@@ -34,3 +35,5 @@ extension OSType {
         self.init(UTGetOSTypeFromString(string))
     }
 }
+
+#endif
