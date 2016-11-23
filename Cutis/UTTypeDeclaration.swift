@@ -40,7 +40,8 @@ public struct UTTypeDeclaration {
                 let tagValues = entry.1 as? [String] ?? [entry.1 as! String]
                 return (tagClass, tagValues)
             })
-            .reduce(TagSpecification(), combine: { (var tags: TagSpecification, next: TagSpecification.Element) -> TagSpecification in
+            .reduce(TagSpecification(), { (tags: TagSpecification, next: TagSpecification.Element) -> TagSpecification in
+                var tags = tags
                 tags.updateValue(next.1, forKey: next.0)
                 return tags
             })
@@ -66,6 +67,6 @@ public struct UTTypeDeclaration {
     public var version: String? { return dictionaryValue[kUTTypeVersionKey as String] as? String }
     
     /// The URL of a reference document describing this type.
-    public var referenceURL: NSURL? { return dictionaryValue[kUTTypeReferenceURLKey as String] as? NSURL }
+    public var referenceURL: URL? { return dictionaryValue[kUTTypeReferenceURLKey as String] as? URL }
 }
 

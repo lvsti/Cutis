@@ -23,13 +23,13 @@ public struct UTType {
     /// registered.
     @available(OSX 10.10, iOS 8.0, *)
     public var isDeclared: Bool {
-        return UTTypeIsDeclared(stringValue)
+        return UTTypeIsDeclared(stringValue as CFString)
     }
     
     /// Returns whether or not the specified UTI is a dynamic UTI.
     @available(OSX 10.10, iOS 8.0, *)
     public var isDynamic: Bool {
-        return UTTypeIsDynamic(stringValue)
+        return UTTypeIsDynamic(stringValue as CFString)
     }
     
     /// Returns the identified type's declaration, as it
@@ -40,7 +40,7 @@ public struct UTType {
     /// - returns: a tag declaration dictionary, or nil if the type is not declared
     public var declaration: UTTypeDeclaration? {
         guard
-            let unmanaged = UTTypeCopyDeclaration(stringValue),
+            let unmanaged = UTTypeCopyDeclaration(stringValue as CFString),
             let dict = (unmanaged.takeRetainedValue() as NSDictionary) as? [String: AnyObject]
         else {
             return nil
@@ -53,19 +53,19 @@ public struct UTType {
     /// the identified type.
     /// 
     /// - returns: a URL, or nil if the bundle cannot be located.
-    public var declaringBundleURL: NSURL? {
-        guard let unmanaged = UTTypeCopyDeclaringBundleURL(stringValue) else {
+    public var declaringBundleURL: URL? {
+        guard let unmanaged = UTTypeCopyDeclaringBundleURL(stringValue as CFString) else {
             return nil
         }
         
-        return unmanaged.takeRetainedValue()
+        return unmanaged.takeRetainedValue() as URL
     }
     
     /// Returns the localized, user-readable type description string
     ///
     /// - returns: a localized string, or nil if no type description is available
     public var typeDescription: String? {
-        guard let unmanaged = UTTypeCopyDescription(stringValue) else {
+        guard let unmanaged = UTTypeCopyDescription(stringValue as CFString) else {
             return nil
         }
         
@@ -79,8 +79,8 @@ public struct UTType {
     ///
     /// - returns: true if the types are equal, or if the receiver
     /// conforms, directly or indirectly, to `type`.
-    public func conformsTo(type: UTType) -> Bool {
-        return UTTypeConformsTo(stringValue, type.stringValue)
+    public func conforms(to type: UTType) -> Bool {
+        return UTTypeConformsTo(stringValue as CFString, type.stringValue as CFString)
     }
     
     /// Returns the identified type's preferred tag with the specified
@@ -92,8 +92,8 @@ public struct UTType {
     /// - parameter tagClass: the class of tags to return
     ///
     /// - returns: the tag string, or nil if there is no tag of the specified class.
-    public func preferredTagWithClass(tagClass: UTTypeTagClass) -> String? {
-        guard let unmanaged = UTTypeCopyPreferredTagWithClass(stringValue, tagClass.name) else {
+    public func preferredTag(with tagClass: UTTypeTagClass) -> String? {
+        guard let unmanaged = UTTypeCopyPreferredTagWithClass(stringValue as CFString, tagClass.name as CFString) else {
             return nil
         }
         
@@ -107,8 +107,8 @@ public struct UTType {
     ///
     /// - returns: an array of tag strings, or nil if there is no tag of the specified class.
     @available(OSX 10.10, iOS 8.0, *)
-    public func allTagsWithClass(tagClass: UTTypeTagClass) -> [String]? {
-        guard let unmanaged = UTTypeCopyAllTagsWithClass(stringValue, tagClass.name) else {
+    public func allTags(with tagClass: UTTypeTagClass) -> [String]? {
+        guard let unmanaged = UTTypeCopyAllTagsWithClass(stringValue as CFString, tagClass.name as CFString) else {
             return nil
         }
         
@@ -143,8 +143,8 @@ public struct UTType {
     /// - parameter type: the identifier of a type to which the result must conform
     ///
     /// - returns: a new type identifier, or nil if `tagClass` is not a known tag class
-    static func preferredIdentifierForTagClass(tagClass: UTTypeTagClass, tag: String, conformingToType type: UTType? = nil) -> UTType? {
-        guard let unmanaged = UTTypeCreatePreferredIdentifierForTag(tagClass.name, tag, type?.stringValue) else {
+    static func preferredIdentifier(for tagClass: UTTypeTagClass, tag: String, conformingTo type: UTType? = nil) -> UTType? {
+        guard let unmanaged = UTTypeCreatePreferredIdentifierForTag(tagClass.name as CFString, tag as CFString, type?.stringValue as CFString?) else {
             return nil
         }
         
@@ -177,8 +177,8 @@ public struct UTType {
     ///
     /// - returns: An array of uniform type identifiers, or nil if `tagClass` is
     /// not a known tag class
-    static func allIdentifiersForTagClass(tagClass: UTTypeTagClass, tag: String, conformingToType type: UTType? = nil) -> [UTType]? {
-        guard let unmanaged = UTTypeCreateAllIdentifiersForTag(tagClass.name, tag, type?.stringValue) else {
+    static func allIdentifiers(for tagClass: UTTypeTagClass, tag: String, conformingTo type: UTType? = nil) -> [UTType]? {
+        guard let unmanaged = UTTypeCreateAllIdentifiersForTag(tagClass.name as CFString, tag as CFString, type?.stringValue as CFString?) else {
             return nil
         }
         
@@ -198,5 +198,5 @@ extension UTType: CustomStringConvertible {
 extension UTType: Equatable {}
 
 public func ==(lhs: UTType, rhs: UTType) -> Bool {
-    return UTTypeEqual(lhs.stringValue, rhs.stringValue)
+    return UTTypeEqual(lhs.stringValue as CFString, rhs.stringValue as CFString)
 }

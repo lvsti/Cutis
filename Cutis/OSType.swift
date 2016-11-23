@@ -32,7 +32,7 @@ extension OSType {
     /// - returns: the OSType value encoded in the string, or 0 if the string is not
     /// a valid encoding of an OSType
     public init(string: String) {
-        self.init(UTGetOSTypeFromString(string))
+        self.init(UTGetOSTypeFromString(string as CFString))
     }
 }
 

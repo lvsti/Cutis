@@ -148,6 +148,7 @@
 				TargetAttributes = {
 					E87699701C3F14DB00FAD8E3 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 					};
 					E87699861C3F179C00FAD8E3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -321,6 +322,7 @@
 				PRODUCT_NAME = Cutis;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -340,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.Cutis;
 				PRODUCT_NAME = Cutis;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
